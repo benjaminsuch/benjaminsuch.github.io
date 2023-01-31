@@ -5,9 +5,6 @@ import { Content } from "./components/Content";
 import { ProfileCard } from "./components/ProfileCard";
 import { Section } from "./components/Section";
 import { Sidebar } from "./components/Sidebar";
-import { globalStyles } from "./style";
-
-globalStyles();
 
 const App = styled(
   (props: { className?: string }) => {

@@ -28,6 +28,28 @@ export const globalStyles = globalCss({
   },
   "p, span": {
     color: "rgb(133, 138, 143)",
+
+    a: {
+      position: "relative",
+
+      "&::before": {
+        content: " ",
+        position: "absolute",
+        bottom: -1,
+        width: 0,
+        height: 3,
+        backgroundColor: "rgb(105, 141, 255)",
+        transition: "all 0.25s ease",
+        opacity: 0,
+      },
+
+      "&:hover": {
+        "&::before": {
+          width: "100%",
+          opacity: 1,
+        },
+      },
+    },
   },
   strong: {
     color: "rgb(179 182 185)",

@@ -23,13 +23,7 @@ export const ProfileCard = styled(
           <TwitterLink />
           <LinkedInLink />
         </Links>
-        <div style={{ padding: "0 2rem", textAlign: "center" }}>
-          <span>
-            React, React Native, TypeScript, NoSQL, PostgreSQL, Electron,
-            Desktop Apps, Mobile Apps, UI/UX, Tooling, Next.js, 3D, Three.js,
-            Google Cloud, Heroku
-          </span>
-        </div>
+        <Tags />
       </div>
     );
   },
@@ -40,6 +34,10 @@ export const ProfileCard = styled(
 
     h1: {
       color: "#000",
+    },
+
+    span: {
+      color: "rgba(0, 0, 0, 0.5)",
     },
   }
 );
@@ -56,3 +54,22 @@ const Links = styled("div", {
     transform: "scale(1.1)",
   },
 });
+
+const Tags = styled(
+  (props: { className?: string }) => {
+    return (
+      <div {...props}>
+        <span>
+          React, React Native, TypeScript, NoSQL, PostgreSQL, Electron, Desktop
+          Apps, Mobile Apps, UI/UX, Tooling, Next.js, 3D, Three.js, Google
+          Cloud, Heroku
+        </span>
+      </div>
+    );
+  },
+  {
+    padding: "0 2rem",
+    textAlign: "center",
+    maxWidth: "75%",
+  }
+);
